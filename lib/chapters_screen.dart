@@ -36,8 +36,9 @@ class chaptersScreenState extends State<ChaptersScreen> {
         title: Text(
           'శ్రీమద్భగవద్గీత',
           style: TextStyle(
+            fontFamily: 'NotoSansTelugu',
             fontWeight: FontWeight.bold,
-            fontSize: isSmallScreen ? 20 : 24,
+            fontSize:  24,
             color: Colors.brown[800],
             shadows: [
               Shadow(
@@ -49,22 +50,22 @@ class chaptersScreenState extends State<ChaptersScreen> {
           ),
         ),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () {
-            // Implement drawer or navigation logic
-          }, 
-          icon: Icon(Icons.menu_rounded, color: Colors.brown[800]),
-          tooltip: 'Menu',
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              // Implement search functionality
-            }, 
-            icon: Icon(Icons.search, color: Colors.brown[800]),
-            tooltip: 'Search',
-          )
-        ],
+        // leading: IconButton(
+        //   onPressed: () {
+        //     // Implement drawer or navigation logic
+        //   }, 
+        //   icon: Icon(Icons.menu_rounded, color: Colors.brown[800]),
+        //   tooltip: 'Menu',
+        // ),
+        // actions: [
+        //   IconButton(
+        //     onPressed: () {
+        //       // Implement search functionality
+        //     }, 
+        //     icon: Icon(Icons.search, color: Colors.brown[800]),
+        //     tooltip: 'Search',
+        //   )
+        // ],
       ),
       body: Container(
         width: double.infinity,
@@ -194,6 +195,7 @@ class chaptersScreenState extends State<ChaptersScreen> {
                                     child: Text(
                                       chapters[index].number,
                                       style: TextStyle(
+                                        fontFamily: 'NotoSansTelugu',
                                         fontSize: screenWidth * 0.045,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.brown[800],
@@ -204,6 +206,7 @@ class chaptersScreenState extends State<ChaptersScreen> {
                                 title: Text(
                                   chapters[index].name,
                                   style: TextStyle(
+                                    fontFamily: 'NotoSansTelugu',
                                     fontSize: isSmallScreen ? 14 : 16,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.brown[800],
@@ -212,6 +215,7 @@ class chaptersScreenState extends State<ChaptersScreen> {
                                 subtitle: Text(
                                   chapters[index].name,
                                   style: TextStyle(
+                                    fontFamily: 'NotoSansTelugu',
                                     fontSize: isSmallScreen ? 12 : 14,
                                     color: Colors.brown[600],
                                   ),
