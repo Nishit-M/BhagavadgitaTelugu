@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:bhagavadgita_telugu/widgets/verse_screen/navigationbar.dart';
 import 'package:bhagavadgita_telugu/widgets/verse_screen/verseview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:bhagavadgita_telugu/provider/gita_provider.dart';
 import 'package:just_audio/just_audio.dart';
@@ -55,14 +56,21 @@ class _VerseDetailScreenNewState extends State<VerseDetailScreenNew>
     super.dispose();
   }
 
-  Future<void> _loadAudio() async {
-    try {
-      await audioPlayer.setAsset(
-          './audio/chapter_${widget.chapterNumber}/verse_${widget.verseNumber}.mp3');
-    } catch (e) {
-      print('Error loading audio: $e');
-    }
+Future<void> _loadAudio() async {
+  try {
+    String assetPath = 'assets/audio/chapter_${widget.chapterNumber}/verse_${widget.verseNumber}.mp3';
+    print('Trying to load: $assetPath');
+    
+    // Check if asset exists
+    final byteData = await rootBundle.load(assetPath);
+    print('Asset loaded, size: ${byteData.lengthInBytes} bytes');
+    
+    await audioPlayer.setAsset(assetPath);
+    print('Audio player set up successfully');
+  } catch (e) {
+    print('Error loading audio: $e');
   }
+}
 
   void togglePlayback() {
     setState(() {

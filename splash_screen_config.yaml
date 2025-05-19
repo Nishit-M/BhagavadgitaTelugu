@@ -1,0 +1,15 @@
+flutter_native_splash:
+  background_image: "assets/images/Krishna-1.png"
+  android: true
+  ios: true
+  web: false
+  
+  # Parameters for controlling image scaling
+  android_gravity: fill  # This will stretch the image to fill the screen
+  ios_content_mode: scaleToFill  # This will stretch the image to fill the screen on iOS
+  
+  # No centered image, just the background
+  
+  # Full screen display
+  fullscreen: true
+  android_screen_orientation: portrait

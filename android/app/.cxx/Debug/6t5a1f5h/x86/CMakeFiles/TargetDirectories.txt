@@ -1,0 +1,2 @@
+D:/Flutter_Projects/bhagavadgita_telugu - Copy/android/app/.cxx/Debug/6t5a1f5h/x86/CMakeFiles/edit_cache.dir
+D:/Flutter_Projects/bhagavadgita_telugu - Copy/android/app/.cxx/Debug/6t5a1f5h/x86/CMakeFiles/rebuild_cache.dir

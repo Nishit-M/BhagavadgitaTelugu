@@ -37,18 +37,28 @@ dependencies:
   cupertino_icons: ^1.0.8
   provider: ^6.1.4
   just_audio: ^0.9.46
+  flutter_native_splash: ^2.3.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
 
+# This section should be at the root level, same indentation as dependencies and dev_dependencies
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+
+flutter_native_splash:
+  background_image: "assets/images/Krishna-1.png"
+  # Remove the image line completely as you don't want a centered logo
+  # image: "assets/icon/app_icon.png"
+  android_12:
+    image: assets/icon/app_icon.png
+    icon_background_color: "#FFFFFF"
+  fullscreen: true
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -62,9 +72,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/audio/
+    - assets/audio/chapter_1/verse_1.mp3
+    - assets/audio/chapter_1/verse_2.mp3
     - assets/images/
     - assets/data/
+    - assets/icon/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
